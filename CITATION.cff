@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: If you use this dataset, please cite it as below.
+title: Digital Educational Ecosystem Assessment — Raw Input Dataset
+version: 1.0.0
+date-released: '2026-02-28'
+authors:
+- family-names: Petrov
+  given-names: Alex
+  email: alex.petrov.dataset@proton.me
+keywords:
+- digital transformation
+- higher education
+- educational ecosystem
+- maturity assessment
+- indicator-based assessment
+- survey data
+license: CC-BY-4.0
+repository-code: https://github.com/REPLACE_WITH_YOUR_ACCOUNT/REPLACE_WITH_YOUR_REPO
+type: dataset
