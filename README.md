@@ -1,17 +1,23 @@
-# Оценка цифровой образовательной экосистемы — набор исходных данных
+# Digital Educational Ecosystem Assessment — Raw Input Dataset
 
-Набор исходных CSV-таблиц для исследования зрелости цифровой образовательной экосистемы университета и приоритетов её развития.
+This repository publishes the **raw input tables** used in the paper on assessing the maturity / development priorities of a university digital educational ecosystem.
 
-Репозиторий опубликован как воспроизводимый исследовательский артефакт и содержит только исходные таблицы (без кода анализа и визуализаций).
+The goal is to make the study reproducible: the data here correspond to the original tabular inputs (indicator catalog, indicator scores, intermediate aggregated tables, and overall outputs that are computed from those inputs).
 
-## Кратко
+> **Important:** This repository contains **only source data** (CSV). No code or derived analytics are included.
 
-- **Тип:** исследовательский датасет
-- **Формат:** CSV (UTF-8, разделитель — запятая)
-- **Релиз:** v1.0 (2026-02-28)
-- **Лицензия:** CC BY 4.0
+---
 
-## Структура репозитория
+## Maintainer
+
+I am **Alex Petrov**, a research software engineer working on reproducible data pipelines for higher‑education digital transformation studies.  
+My role in this project was to standardize the study’s input tables, export them into portable formats, and document the dataset structure for public release.
+
+Contact: `alex.petrov.dataset@proton.me`
+
+---
+
+## Repository structure
 
 ```
 data/
@@ -22,42 +28,48 @@ data/
     table_5_2_questionnaire_summary.csv
     table_5_3_priorities.csv
     overall_results_and_stability.csv
-
-CHECKSUMS.sha256
 DATA_DICTIONARY.md
 CITATION.cff
 LICENSE
-README.md
 ```
 
-## Файлы датасета
+All CSV files are **UTF‑8** encoded and use a comma `,` as separator.
 
-- **`indicator_catalog.csv`** — реестр индикаторов (ID, домены, названия, источник подтверждения, вес).
-- **`indicator_scores.csv`** — оценки по индикаторам, используемые как вход для расчётов.
-- **`table_5_1_mi_ci.csv`** — агрегированные метрики по доменам для Таблицы 5.1.
-- **`table_5_2_questionnaire_summary.csv`** — сводная статистика анкеты для Таблицы 5.2.
-- **`table_5_3_priorities.csv`** — приоритеты, ранжирование и разрыв до целевого значения для Таблицы 5.3.
-- **`overall_results_and_stability.csv`** — итоговые сводные результаты и показатели устойчивости.
+---
 
-Подробное описание колонок приведено в **`DATA_DICTIONARY.md`**.
+## Files overview
 
-## Проверка целостности
+- **`indicator_catalog.csv`** — master list of indicators (IDs, grouping, textual descriptions, metadata).
+- **`indicator_scores.csv`** — indicator-level scores used as the primary assessment input.
+- **`table_5_1_mi_ci.csv`** — aggregated values used in Table 5.1 of the paper (Mi / Ci-type summaries).
+- **`table_5_2_questionnaire_summary.csv`** — questionnaire / expert survey summary used in Table 5.2.
+- **`table_5_3_priorities.csv`** — priorities / weights / ordering used in Table 5.3.
+- **`overall_results_and_stability.csv`** — final summary values and stability/robustness flags (as reported).
 
-Для проверки целостности файлов по опубликованным контрольным суммам:
+A full column-level description (as-is) and checksums are provided in **`DATA_DICTIONARY.md`**.
 
-```powershell
-cd ecosystem_dataset
-Get-FileHash .\data\raw\*.csv -Algorithm SHA256
-```
+---
 
-Эталонные значения находятся в **`CHECKSUMS.sha256`**.
+## Data provenance and privacy
 
-## Использование и воспроизводимость
+The dataset is released as a **research artifact**. It contains **no personal data** (no names, emails, phone numbers, or identifiers of individual respondents).  
+If you plan to combine this dataset with other sources, ensure that you comply with your institution’s privacy and research ethics requirements.
 
-- Датасет не содержит прямых персональных идентификаторов.
-- Повторное использование разрешено условиями лицензии проекта.
-- Для воспроизводимости рекомендуется сохранять исходные файлы без изменений, а производные результаты версионировать отдельно.
+---
 
-## Цитирование
+## Recommended citation
 
-Используйте метаданные для цитирования из **`CITATION.cff`**.
+See **`CITATION.cff`** for the preferred citation format.
+
+---
+
+## License
+
+This dataset is provided under the license specified in **`LICENSE`**.
+
+---
+
+## Versioning
+
+- Dataset release: **v1.0**
+- Release date: **2026-02-28**
