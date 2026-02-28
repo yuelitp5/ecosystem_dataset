@@ -61,8 +61,3 @@ Reference hashes are stored in **`CHECKSUMS.sha256`**.
 ## Citation
 
 Use the citation metadata from **`CITATION.cff`**.
-
-## Maintainer
-
-**Alex Petrov**  
-Contact: `alex.petrov.dataset@proton.me`
