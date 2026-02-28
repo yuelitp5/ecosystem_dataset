@@ -1,17 +1,17 @@
-# Digital Educational Ecosystem Assessment — Raw Input Dataset
+# Оценка цифровой образовательной экосистемы — набор исходных данных
 
-Raw CSV data for a study on university digital educational ecosystem maturity and development priorities.
+Набор исходных CSV-таблиц для исследования зрелости цифровой образовательной экосистемы университета и приоритетов её развития.
 
-The repository is published as a reproducible research artifact and contains only source tables (no analysis code, no derived visualizations).
+Репозиторий опубликован как воспроизводимый исследовательский артефакт и содержит только исходные таблицы (без кода анализа и визуализаций).
 
-## At a glance
+## Кратко
 
-- **Type:** research dataset
-- **Format:** CSV (UTF-8, comma-separated)
-- **Release:** v1.0 (2026-02-28)
-- **License:** CC BY 4.0
+- **Тип:** исследовательский датасет
+- **Формат:** CSV (UTF-8, разделитель — запятая)
+- **Релиз:** v1.0 (2026-02-28)
+- **Лицензия:** CC BY 4.0
 
-## Repository structure
+## Структура репозитория
 
 ```
 data/
@@ -30,34 +30,34 @@ LICENSE
 README.md
 ```
 
-## Dataset files
+## Файлы датасета
 
-- **`indicator_catalog.csv`** — indicator registry (IDs, domains, names, evidence source, weight).
-- **`indicator_scores.csv`** — indicator-level scoring input used in the assessment.
-- **`table_5_1_mi_ci.csv`** — aggregated domain metrics used in Table 5.1.
-- **`table_5_2_questionnaire_summary.csv`** — questionnaire summary statistics used in Table 5.2.
-- **`table_5_3_priorities.csv`** — ranked priorities and gap-to-target values used in Table 5.3.
-- **`overall_results_and_stability.csv`** — final summarized outputs and stability-related values.
+- **`indicator_catalog.csv`** — реестр индикаторов (ID, домены, названия, источник подтверждения, вес).
+- **`indicator_scores.csv`** — оценки по индикаторам, используемые как вход для расчётов.
+- **`table_5_1_mi_ci.csv`** — агрегированные метрики по доменам для Таблицы 5.1.
+- **`table_5_2_questionnaire_summary.csv`** — сводная статистика анкеты для Таблицы 5.2.
+- **`table_5_3_priorities.csv`** — приоритеты, ранжирование и разрыв до целевого значения для Таблицы 5.3.
+- **`overall_results_and_stability.csv`** — итоговые сводные результаты и показатели устойчивости.
 
-Column-level details are documented in **`DATA_DICTIONARY.md`**.
+Подробное описание колонок приведено в **`DATA_DICTIONARY.md`**.
 
-## Integrity check
+## Проверка целостности
 
-To verify file integrity against published checksums:
+Для проверки целостности файлов по опубликованным контрольным суммам:
 
 ```powershell
 cd ecosystem_dataset
 Get-FileHash .\data\raw\*.csv -Algorithm SHA256
 ```
 
-Reference hashes are stored in **`CHECKSUMS.sha256`**.
+Эталонные значения находятся в **`CHECKSUMS.sha256`**.
 
-## Data use and reproducibility
+## Использование и воспроизводимость
 
-- The dataset contains no direct personal identifiers.
-- Reuse is allowed under the project license.
-- For reproducible workflows, keep raw files unchanged and version derived outputs separately.
+- Датасет не содержит прямых персональных идентификаторов.
+- Повторное использование разрешено условиями лицензии проекта.
+- Для воспроизводимости рекомендуется сохранять исходные файлы без изменений, а производные результаты версионировать отдельно.
 
-## Citation
+## Цитирование
 
-Use the citation metadata from **`CITATION.cff`**.
+Используйте метаданные для цитирования из **`CITATION.cff`**.
